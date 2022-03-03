@@ -1,0 +1,39 @@
+{
+    "name": "desicover-express-mongo",
+    "version": "1.0.0",
+    "description": "Desicovers offline application which enables us to consume the APIs for e-commerce. Uses mongoDb for their backend",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index",
+        "dev": "nodemon index",
+        "backend": "nodemon index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hrithikwins/desicover-express-mongo.git"
+    },
+    "keywords": [
+        "desicover",
+        "mobile covers backend"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hrithikwins/desicover-express-mongo/issues"
+    },
+    "homepage": "https://github.com/hrithikwins/desicover-express-mongo#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "csvtojson": "^2.0.10",
+        "express": "^4.17.2",
+        "mongo": "^0.1.0",
+        "mongoose": "^6.1.7",
+        "morgan": "^1.10.0",
+        "node-cron": "^3.0.0",
+        "short-id": "^0.1.0-1",
+        "shortid": "^2.2.16",
+        "socket.io": "^4.4.1",
+        "uuid": "^8.3.2"
+    }
+}

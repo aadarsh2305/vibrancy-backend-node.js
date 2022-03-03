@@ -1,0 +1,17 @@
+{
+    "id": "1",
+    "subCategoryObjectId": "1",
+    "featureArray": [
+        "size",
+        "color",
+        "material",
+        "origin",
+        "type",
+        "style",
+        "pattern",
+        "season",
+        "occasion",
+        "fit",
+        "length"
+    ]
+}

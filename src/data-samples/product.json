@@ -1,0 +1,47 @@
+{
+    "id": "1",
+    "productName": "ADIDAS 4DFWD SHOES",
+    "brandId": "1",
+    "categoryName": "shoe",
+    "subCategoryName": "mens shoe",
+    "tagsArray": [
+        "footwear",
+        "shoes",
+        "adidas",
+        "adidas 4dfwd",
+        "adidas 4dfwd shoes"
+    ],
+    "featureObject": {
+        "size": "8",
+        "color": "orange & white",
+        "material": "material name",
+        "origin": "Made In India",
+        "type": "sporty",
+        "style": "outdoors",
+        "pattern": "black stripes",
+        "season": "winters & summers",
+        "occasion": "any",
+        "fit": "standard",
+        "length": "40Inch"
+    },
+    "productImage": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/e86f2cad9730409397bead5d00f31c91_9366/adidas_4DFWD_Shoes_White_FY3967_01_standard.jpg",
+    "productDescription": "Feel progress every time you lace up with adidas 4DFWD, 3D printed midsole technology, designed to move you forward. When a foot impacts the ground, it applies braking forces. The 4DFWD midsole reduces these forces by redirecting the impact into forward motion. With every step, 4DFWD compresses forward, providing a smooth transition and a unique running experience.",
+    "numberOfStocks": "200",
+    "countriesDeliveredTo": ["india", "usa", "china"],
+    "daysForDelivery": "4",
+    "onSale": "true",
+    "originCountry": "neitherlands",
+    "brand": "Adidas",
+    "price": "1999 INR",
+    "discountedPrice": "1000",
+    "reviews": {
+        "userId": 1,
+        "userName": "bau useer",
+        "review": "good product"
+    },
+    "ratings": {
+        "userId": 1,
+        "userName": "bau user",
+        "rating": "4"
+    }
+}
