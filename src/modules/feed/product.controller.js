@@ -33,10 +33,10 @@ async function createNewProduct(req, res) {
 }
 
 async function getAllProducts(req, res) {
-    const { page = 1, limit = 10 } = req.query;
-    const productArray = await Product.find()
-        .limit(limit * 1)
-        .skip((page - 1) * limit);
+   // const { page = 1, limit = 10 } = req.query;
+    const productArray = await Product.find();
+        // .limit(limit * 1)
+        // .skip((page - 1) * limit);
     res.send(productArray);
 }
 
@@ -95,10 +95,10 @@ async function deleteProductById(req, res) {
 
 module.exports = {
     createNewProduct,
-    bulkInsertProducts,
+    // bulkInsertProducts,
     getAllProducts,
-    searchProductById,
-    searchProductByName,
-    updateProductById,
-    deleteProductById,
+    // searchProductById,
+    // searchProductByName,
+    // updateProductById,
+    // deleteProductById,
 };
