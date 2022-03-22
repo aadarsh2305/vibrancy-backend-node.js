@@ -30,7 +30,15 @@ async function getAllProducts(req, res) {
     const productArray = await Product.find();
         // .limit(limit * 1)
         // .skip((page - 1) * limit);
-    res.send(productArray);
+   /// res.send("status","okk");
+
+   res.status(201).send(
+       {
+       "feeds": productArray,
+       // "status": `okk`,
+       }
+
+   );
 }
 
 async function bulkInsertProducts(req, res) {
