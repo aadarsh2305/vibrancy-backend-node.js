@@ -1,7 +1,7 @@
 const {
     createNewProduct,
     bulkInsertProducts,
-    getAllProducts,
+    getAllfeeds,
     searchProductById,
     searchProductByName,
     updateProductById,
@@ -14,8 +14,8 @@ function productRoutes(app) {
     app.post("/bulk-insert-products", (req, res) => {
         bulkInsertProducts(req, res);
     });
-    app.get("/get-all-products", (req, res) => {
-        getAllProducts(req, res);
+    app.get("/get-all-feeds", (req, res) => {
+        getAllfeeds(req, res);
     });
     app.post("/search-product-by-id", (req, res) => {
         searchProductById(req, res);

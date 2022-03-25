@@ -25,7 +25,7 @@ async function createNewProduct(req, res) {
         });
 }
 
-async function getAllProducts(req, res) {
+async function getAllfeeds(req, res) {
    // const { page = 1, limit = 10 } = req.query;
     const productArray = await Product.find();
         // .limit(limit * 1)
@@ -37,7 +37,6 @@ async function getAllProducts(req, res) {
        "feeds": productArray,
        // "status": `okk`,
        }
-
    );
 }
 
@@ -97,7 +96,7 @@ async function deleteProductById(req, res) {
 module.exports = {
     createNewProduct,
     // bulkInsertProducts,
-    getAllProducts,
+    getAllfeeds,
     // searchProductById,
     // searchProductByName,
     // updateProductById,
