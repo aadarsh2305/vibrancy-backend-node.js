@@ -3,41 +3,41 @@ const { uploadToCSV } = require("./utils/uploadToCSV");
 
 async function createNewProduct(req, res) {
     await Product({
-        id: req.body.id,
-        productName: req.body.productName,
-        brandId: req.body.brandId,
-        categoryName: req.body.categoryName,
-        subCategoryName: req.body.subCategoryName,
-        tagsArray: req.body.tagsArray,
-        featureObject: req.body.featureObject,
-        productImage: req.body.productImage,
-        productDescription: req.body.productDescription,
-        numberOfStocks: req.body.numberOfStocks,
-        countriesDeliveredTo: req.body.countriesDeliveredTo,
-        daysForDelivery: req.body.daysForDelivery,
-        onSale: req.body.onSale,
-        originCountry: req.body.originCountry,
-        brand: req.body.brand,
-        price: req.body.price,
-        discountedPrice: req.body.discountedPrice,
-        reviews: req.body.reviews,
-        ratings: req.body.ratings,
+        id:                 req.body.id,
+        profileImageUrl:    req.body.profileImageUrl,
+        name:               req.body.name,
+        lastSeenValue:      req.body.lastSeenValue,
+        lastSeenUnit:       req.body.lastSeenUnit,
+        feedTitle:          req.body.feedTitle,
+        feedContent:        req.body.feedContent,
+        hashTag:            req.body.hashTag,
+        noOfLikes:          req.body.noOfLikes,
+        noOfComments:       req.body.noOfComments,
     })
         .save()
         .then((data) => {
-            res.status(201);
+            res.status(201);           
+            console.log("status: okk");
         })
         .catch((err) => {
             res.status(400).send(err);
+            console.log(err);
         });
 }
 
-async function getAllProducts(req, res) {
-    const { page = 1, limit = 10 } = req.query;
-    const productArray = await Product.find()
-        .limit(limit * 1)
-        .skip((page - 1) * limit);
-    res.send(productArray);
+async function getAllfeeds(req, res) {
+   // const { page = 1, limit = 10 } = req.query;
+    const productArray = await Product.find();
+        // .limit(limit * 1)
+        // .skip((page - 1) * limit);
+   /// res.send("status","okk");
+
+   res.status(201).send(
+       {
+       "feeds": productArray,
+       // "status": `okk`,
+       }
+   );
 }
 
 async function bulkInsertProducts(req, res) {
@@ -95,10 +95,10 @@ async function deleteProductById(req, res) {
 
 module.exports = {
     createNewProduct,
-    bulkInsertProducts,
-    getAllProducts,
-    searchProductById,
-    searchProductByName,
-    updateProductById,
-    deleteProductById,
+    // bulkInsertProducts,
+    getAllfeeds,
+    // searchProductById,
+    // searchProductByName,
+    // updateProductById,
+    // deleteProductById,
 };

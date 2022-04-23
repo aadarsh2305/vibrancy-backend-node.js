@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
     try {
         const con = await mongoose.connect(
-           "mongodb+srv://vibrancy:vibrancy@vibrancy.g36op.mongodb.net/vibrancy?retryWrites=true&w=majority",
+            "mongodb+srv://vibrancy:vibrancy@vibrancy.g36op.mongodb.net/vibrancy?retryWrites=true&w=majority",
+           //"mongodb+srv://vibrancy:vibrancy@vibrancy.g36op.mongodb.net/vibrancy?retryWrites=true&w=majority",
            
             // "mongodb+srv://desicover:4sktnbsoGAJvwrh3@cluster0.a64rd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
             {
