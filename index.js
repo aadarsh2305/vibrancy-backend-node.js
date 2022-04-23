@@ -4,7 +4,7 @@ const cors = require("cors");
 let port = process.env.PORT || 8000;
 const uuid = require("uuid");
 const { productRoutes } = require("./src/modules/feed/product.routes");
-
+const {userRoutes} = require("./src/modules/feed/user.routes");
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -39,6 +39,7 @@ app.get("/", (req, res) => res.send("Welcome to Desi covers backend APIs"));
 // featureRoutes(app);
 // productRoutes(app);
 productRoutes(app);
+userRoutes(app);
 // subCategoryRoutes(app);
 
 app._router.stack.forEach(function (r) {
