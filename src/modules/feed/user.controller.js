@@ -19,7 +19,16 @@ async function createNewUser(req, res) {
     })
         .save()
         .then((data) => {
-            res.status(201).send({okk:"okk"});
+            res.status(201)
+            .send(
+                {
+                    "status":201,
+                    data:[{
+                        "resp":"inserted"
+                    }]
+                }
+            
+                );
         })
         .catch((err) => {
             res.status(400).send(err);
