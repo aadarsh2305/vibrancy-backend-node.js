@@ -49,7 +49,7 @@ function socialRoutes(app) {
         socialPostCreate(profileImage,postImage,req, res);
     });
 
-    app.post("/social-post-all-data",(req, res) => {
+    app.get("/social-post-all-data",(req, res) => {
        
         socialPostalldata(req, res);
     });
