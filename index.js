@@ -1,13 +1,25 @@
 const express = require("express");
+
 const db = require("./src/utils/connection");
 const cors = require("cors");
 let port = process.env.PORT || 8000;
 const uuid = require("uuid");
 const { productRoutes } = require("./src/modules/feed/product.routes");
-const {userRoutes} = require("./src/modules/feed/user.routes");
+const { userRoutes } = require("./src/modules/feed/user.routes");
+const { rewardsRoutes } = require("./src/modules/feed/rewards.routes");
+const { socialRoutes } = require("./src/modules/feed/social.routes");
+const { topicsRoutes } = require("./src/modules/feed/topics.routes");
+const { chatRoutes } = require("./src/modules/feed/chat.routes");
+
+
+
+
 const app = express();
+
+
 app.use(cors());
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 const http = require("http").Server(app);
 const io = require("socket.io")(http, {
     cors: {
@@ -35,22 +47,16 @@ http.listen(port, function () {
 db.establishConnection();
 app.get("/", (req, res) => res.send("Welcome to Desi covers backend APIs"));
 
-// categoryRoutes(app);
-// featureRoutes(app);
-// productRoutes(app);
+
 productRoutes(app);
 userRoutes(app);
-// subCategoryRoutes(app);
-
+rewardsRoutes(app);
+socialRoutes(app);
+topicsRoutes(app);
+chatRoutes(app);
 app._router.stack.forEach(function (r) {
     if (r.route && r.route.path) {
         console.log(r.route.path);
     }
 });
 
-// /create-new-product
-// /get-all-products
-// /search-product-by-id
-// /search-product-by-name
-// /update-product-by-id
-// /delete-product-by-id
