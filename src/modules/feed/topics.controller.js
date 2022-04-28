@@ -42,7 +42,7 @@ async function topicsPostalldata(req, res) {
             res.status(201).send(
                 {
                     "status":"201",
-                    "data":topic
+                    "topics":topic
                    
                 //        "data":[{
                 //        //logoUrl:reward[0].logoUrl,

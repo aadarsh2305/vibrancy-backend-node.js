@@ -14,7 +14,7 @@ async function createNewUser(req, res) {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        phone: req.body.number,
+        phone: req.body.phone,
         gender: req.body.gender,
     })
         .save()
@@ -24,7 +24,7 @@ async function createNewUser(req, res) {
                 {
                     "status":201,
                     data:[{
-                        "resp":"inserted"
+                        "msg":"inserted"
                     }]
                 }
             

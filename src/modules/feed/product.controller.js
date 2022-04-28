@@ -34,7 +34,7 @@ async function getAllfeeds(req, res) {
 
    res.status(201).send(
        {
-       "feeds": productArray,
+       "syncs": productArray,
        // "status": `okk`,
        }
    );

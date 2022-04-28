@@ -43,7 +43,7 @@ async function getsrewards(req, res) {
             res.status(201).send(
                 {
                     "status":"201",
-                    "data":reward
+                    "rewards":reward
                    
                 //        "data":[{
                 //        //logoUrl:reward[0].logoUrl,
