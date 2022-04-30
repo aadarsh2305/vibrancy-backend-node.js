@@ -44,7 +44,7 @@ function rewardsRoutes(app) {
         rewardsCreate(fileData,req, res);
     });
 
-    app.post("/gets-rewards",(req, res) => {
+    app.get("/gets-rewards",(req, res) => {
        
         getsrewards(req, res);
     });
