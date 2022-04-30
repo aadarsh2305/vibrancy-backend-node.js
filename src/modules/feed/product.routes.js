@@ -1,7 +1,7 @@
 const {
     createNewProduct,
     bulkInsertProducts,
-    getAllfeeds,
+    getAllsyncs,
     searchProductById,
     searchProductByName,
     updateProductById,
@@ -9,13 +9,13 @@ const {
 } = require("./product.controller");
 function productRoutes(app) {
     app.post("/create-new-product", (req, res) => {
-        createNewProduct(req, res);
+        createNewProduct(req, res); 
     });
     app.post("/bulk-insert-products", (req, res) => {
         bulkInsertProducts(req, res);
     });
-    app.get("/get-all-feeds", (req, res) => {
-        getAllfeeds(req, res);
+    app.get("/get-all-syncs", (req, res) => {
+        getAllsyncs(req, res);
     });
     app.post("/search-product-by-id", (req, res) => {
         searchProductById(req, res);

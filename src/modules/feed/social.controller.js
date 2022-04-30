@@ -4,7 +4,7 @@ async function socialPostCreate(profileImage,postImage,req, res) {
     //console.log(profileImage);
     //console.log(postImage);
 
-    var serverurl = "localhost:8000/";
+    var serverurl = "http://192.168.29.160:8000/";
     var imagurl = serverurl + profileImage;
 
     var imagurl1 = serverurl + postImage;
@@ -41,7 +41,7 @@ async function socialPostalldata(req, res) {
             res.status(201).send(
                 {
                     "status":"201",
-                    "data":social
+                    "socials":social
                    
                 //        "data":[{
                 //        //logoUrl:reward[0].logoUrl,

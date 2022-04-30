@@ -25,7 +25,7 @@ async function createNewProduct(req, res) {
         });
 }
 
-async function getAllfeeds(req, res) {
+async function getAllsyncs(req, res) {
    // const { page = 1, limit = 10 } = req.query;
     const productArray = await Product.find();
         // .limit(limit * 1)
@@ -96,7 +96,7 @@ async function deleteProductById(req, res) {
 module.exports = {
     createNewProduct,
     // bulkInsertProducts,
-    getAllfeeds,
+    getAllsyncs,
     // searchProductById,
     // searchProductByName,
     // updateProductById,
