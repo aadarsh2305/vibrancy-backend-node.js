@@ -9,7 +9,7 @@ const {
 } = require("./product.controller");
 function productRoutes(app) {
     app.post("/create-new-product", (req, res) => {
-        createNewProduct(req, res);
+        createNewProduct(req, res); 
     });
     app.post("/bulk-insert-products", (req, res) => {
         bulkInsertProducts(req, res);
