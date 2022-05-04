@@ -10,7 +10,7 @@ const { rewardsRoutes } = require("./src/modules/feed/rewards.routes");
 const { socialRoutes } = require("./src/modules/feed/social.routes");
 const { topicsRoutes } = require("./src/modules/feed/topics.routes");
 const { chatRoutes } = require("./src/modules/feed/chat.routes");
-
+const { eventsRoutes } = require("./src/modules/feed/events.routes");
 
 
 
@@ -54,6 +54,7 @@ rewardsRoutes(app);
 socialRoutes(app);
 topicsRoutes(app);
 chatRoutes(app);
+eventsRoutes(app);
 app._router.stack.forEach(function (r) {
     if (r.route && r.route.path) {
         console.log(r.route.path);
