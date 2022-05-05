@@ -4,8 +4,8 @@ async function eventPostCreate(backgroundImagePath,companyLogo,req, res) {
     console.log(backgroundImagePath);
     console.log(companyLogo);
 
-    var serverurl = "http://192.168.29.160:8000/";
-
+    //var serverurl = "http://192.168.29.160:8000/";
+    var serverurl = "https://vibrancy-backend-nodejs-production.up.railway.app/";
     var imagurl = serverurl + backgroundImagePath;
     var imagurl1 = serverurl + companyLogo;
     var eventsUniqueId = Math.floor(Math.random() * 55555);
