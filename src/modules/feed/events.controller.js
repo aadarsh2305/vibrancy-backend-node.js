@@ -9,7 +9,11 @@ async function eventPostCreate(backgroundImagePath,companyLogo,req, res) {
     var imagurl = serverurl + backgroundImagePath;
     var imagurl1 = serverurl + companyLogo;
     var eventsUniqueId = Math.floor(Math.random() * 55555);
-
+    var eventdt = [{
+        "day":"monday",
+        "startTime":"10am",
+        "endTime":"10pm" 
+    }]
 
     await Events({   
         eventsUniqueId:         eventsUniqueId,
@@ -23,7 +27,7 @@ async function eventPostCreate(backgroundImagePath,companyLogo,req, res) {
         location:               req.body.location,
         topic:                  req.body.topic,
         charges:                req.body.charges,
-        eventdt:                req.body.eventdt,
+        schedule:                eventdt,
     })
         .save()
         .then((data) => {

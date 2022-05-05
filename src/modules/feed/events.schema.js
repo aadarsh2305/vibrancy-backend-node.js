@@ -36,8 +36,8 @@ const Eventschema = new Schema(
         charges:{
             type:String
         },
-        eventdt:{
-            type:String
+        schedule:{
+            type:Array
         },
       
     },
