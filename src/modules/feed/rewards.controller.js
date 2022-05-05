@@ -4,7 +4,9 @@ const Reward = require('./rewards.schema');
 
 async function rewardsCreate(fileData,req, res) {
     console.log(fileData);
-    var serverurl = "localhost:8000/";
+   // var serverurl = "localhost:8000/";
+
+   var serverurl = "https://vibrancy-backend-nodejs-production.up.railway.app/";
     var fileurld = serverurl + fileData;
 
     await Reward({
