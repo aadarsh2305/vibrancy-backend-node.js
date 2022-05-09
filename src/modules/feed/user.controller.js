@@ -35,19 +35,19 @@ async function createNewUser(req, res) {
         });
 }
 
-// async function getAlluser(req, res) {
-//     // const { page = 1, limit = 3 } = req.query;
-//     const userstArray = await User.find();
-//     //     .limit(limit * 1)
-//     //     .skip((page - 1) * limit);
-//     res.send
-//         (
-//             {
-//                 "status": "200",
-//                 data: userstArray
-//             }
-//         );
-// }
+async function getAlluser(req, res) {
+    // const { page = 1, limit = 3 } = req.query;
+    const userstArray = await User.find();
+    //     .limit(limit * 1)
+    //     .skip((page - 1) * limit);
+    res.send
+        (
+            {
+                "status": "200",
+                data: userstArray
+            }
+        );
+}
 
 
 
@@ -263,7 +263,7 @@ async function createNewUser(req, res) {
 module.exports = {
 
     createNewUser,
-    // getAlluser,
+    getAlluser,
     // searchUserByName,
     // updateUsertById,
     // updateUsertBypost,

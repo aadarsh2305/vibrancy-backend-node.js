@@ -1,6 +1,6 @@
 const {
     createNewUser,
-    // getAlluser,
+    getAlluser,
     // searchUserByName,
     // updateUsertById,
     // updateUsertBypost,
@@ -24,12 +24,12 @@ function userRoutes(app) {
         // })
     });
 
-//     app.get("/get-all-user", (req, res) => {
-//         getAlluser(req, res);
-//         // res.status(201).send({
-//         //     msg: "user get request"
-//         // })
-//     });
+    app.get("/get-all-user", (req, res) => {
+        getAlluser(req, res);
+        // res.status(201).send({
+        //     msg: "user get request"
+        // })
+    });
 
 //     app.post("/search-user-by-name", (req, res) => {
 //         searchUserByName(req, res);
