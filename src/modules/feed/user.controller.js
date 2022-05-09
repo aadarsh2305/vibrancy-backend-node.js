@@ -44,7 +44,7 @@ async function getAlluser(req, res) {
         (
             {
                 "status": "200",
-                data: userstArray
+                "user": userstArray
             }
         );
 }
