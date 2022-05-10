@@ -33,6 +33,11 @@ cron = require("node-cron");
 
 io.on("connection", function (socket) {
     console.log("A user connected");
+
+    socket.on("/test", (msg)=>{
+        console.log(msg);
+      });
+
     socket.on("greeting", (message) => console.log("Received: " + message));
     //Whenever someone disconnects this piece of code executed
     socket.on("disconnect", function () {
