@@ -4,7 +4,8 @@ async function socialPostCreate(profileImage,postImage,req, res) {
     //console.log(profileImage);
     //console.log(postImage);
 
-    var serverurl = "http://192.168.29.160:8000/";
+   // var serverurl = "http://192.168.29.160:8000/";
+   var serverurl = "https://vibrancy-backend-nodejs-production.up.railway.app/";
     var imagurl = serverurl + profileImage;
 
     var imagurl1 = serverurl + postImage;
